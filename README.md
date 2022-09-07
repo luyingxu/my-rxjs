@@ -1,7 +1,7 @@
 # Rxjs（核心概念 + 简单实现）
 ## 使用方法
 ```js
-import { Observable, map, Subject } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 const source = new Observable((observer)=> {
     let i = 0;
@@ -40,17 +40,15 @@ setTimeout(() => {
 - 测试驱动, 替换import
 - [v1] 实现数据生产与消费（Observable + Observer）
     - 通过subscribe实现对function的调用
-    - 目标： sync/async + multiple returns
-    - Next： 
+    - 目标： sync/async + multiple returns <img width="800" alt="image" src="https://user-images.githubusercontent.com/102499728/188781179-e281abfe-b92c-4cee-8e9d-2543cc921eaa.png">
+    - TODO： 
     1. 缺少状态判断（完成状态以后不再生产、消费数据）
     2. 清理
 - [v2] +状态判断, 完成了数据的生产与消费
     - Next： 数据处理  
-// TODO: https://rxjs.dev/guide/observable 表格
+### 数据处理
 - [v3] 数据处理（operator）
     - map
 - [v4] 链式处理 (pipe)
-### 数据处理
-
 
 
