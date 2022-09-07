@@ -1,4 +1,4 @@
-# Rxjs（核心概念 + 简单实现）
+# RxJS（核心概念 + 简单实现）
 ## 使用方法
 ```js
 import { Observable, map } from 'rxjs';
