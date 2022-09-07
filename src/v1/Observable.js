@@ -1,8 +1,8 @@
 export class Observable {
-    constructor(_subscribe) {
-        this._subscribe = _subscribe;
+    constructor(dataProducer) {
+        this.dataProducer = dataProducer;
     }
     subscribe(observer) {
-        return this._subscribe(observer);
+        return this.dataProducer(observer);
     }
 }

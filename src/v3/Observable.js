@@ -1,10 +1,10 @@
 export class Observable {
-    constructor(_subscribe) {
-        this._subscribe = _subscribe;
+    constructor(dataProducer) {
+        this.dataProducer = dataProducer;
     }
     subscribe(observer) {
         const wrapper = new ObserverWrapper(observer);
-        const unsubscribeFn = this._subscribe(wrapper);
+        const unsubscribeFn = this.dataProducer(wrapper);
         wrapper.setUnsubscribeFn(unsubscribeFn);
         return wrapper;
     }

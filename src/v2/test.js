@@ -10,7 +10,7 @@ const source = new Observable((observer)=> {
         observer.next(num);
     }, 1000)
     setTimeout(()=> {
-        observer.complete('error');
+        observer.complete('done');
     }, 2500);
     return function unsubscribe() {
         clearInterval(timer);
